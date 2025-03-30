@@ -1,6 +1,6 @@
 {
     "name": "groton-school/slim-lti-skeleton",
-    "description": "A Slim Framework skeleton application for rapid development",
+    "description": "A Slim Framework skeleton LTI Tool for rapid development",
     "keywords": [
         "microframework",
         "rest",
