@@ -1,13 +1,14 @@
 {
-    "name": "slim/slim-skeleton",
+    "name": "groton-school/slim-lti-skeleton",
     "description": "A Slim Framework skeleton application for rapid development",
     "keywords": [
         "microframework",
         "rest",
         "router",
-        "psr7"
+        "psr7",
+        "lti"
     ],
-    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "homepage": "http://github.com/groton-school/slim-lti-skeleton",
     "license": "MIT",
     "authors": [
         {
@@ -26,6 +27,7 @@
             "homepage": "https://www.groton.org"
         }
     ],
+    "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
