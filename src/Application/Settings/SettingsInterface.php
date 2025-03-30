@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Application\Settings;
 
-interface SettingsInterface
+use GrotonSchool\Slim\LTI;
+
+interface SettingsInterface extends LTI\SettingsInterface
 {
     /**
      * @param string $key

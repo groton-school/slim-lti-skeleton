@@ -31,7 +31,7 @@ return function (ContainerBuilder $containerBuilder) {
             return $logger;
         },
         // all settings interfaces map to the App Settings
-        LTI\Application\SettingsInterface::class => DI\get(SettingsInterface::class),
+        LTI\SettingsInterface::class => DI\get(SettingsInterface::class),
 
         // autowire interface implementations
         ILtiRegistration::class => DI\autowire(LtiRegistration::class),

@@ -21,6 +21,9 @@ return function (ContainerBuilder $containerBuilder) {
                     'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
                     'level' => Logger::DEBUG,
                 ],
+                Settings::TOOL_NAME => 'slim-lti-skeleton',
+                Settings::TOOL_URL => 'https://example.com', // Should be set CORRECTLY!
+                Settings::SCOPES => ['https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly']
             ]);
         }
     ]);
