@@ -8,6 +8,7 @@ class Settings implements SettingsInterface
 {
     public const TOOL_NAME = 'TOOL_NAME';
     public const TOOL_URL = 'TOOL_URL';
+    public const TOOL_REGISTRATION = 'TOOL_REGISTRATION';
     public const SCOPES = 'SCOPES';
 
     private array $settings;
@@ -33,6 +34,11 @@ class Settings implements SettingsInterface
     public function getToolUrl(): string
     {
         return $this->settings[self::TOOL_URL];
+    }
+
+    public function getToolRegistration(): array
+    {
+        return $this->settings[self::TOOL_REGISTRATION];
     }
 
     /**
