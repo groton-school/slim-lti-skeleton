@@ -25,7 +25,7 @@ return function (ContainerBuilder $containerBuilder) {
                     'level' => Logger::DEBUG,
                 ],
                 Settings::TOOL_NAME => 'slim-lti-skeleton',
-                Settings::TOOL_URL => 'https://example.com', // TODO Should be set CORRECTLY!
+                Settings::TOOL_URL => 'https://example.com', // TODO gShould be set CORRECTLY!
                 Settings::SCOPES => ['https://purl.imsglobal.org/spec/lti-nrps/scope/contextmembership.readonly'],
                 Settings::TOOL_REGISTRATION => [
                     'application_type' => 'web',
