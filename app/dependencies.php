@@ -14,6 +14,9 @@ use GrotonSchool\Slim\LTI\Infrastructure\CookieInterface;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Monolog\Processor\UidProcessor;
+use Odan\Session\PhpSession;
+use Odan\Session\SessionInterface;
+use Odan\Session\SessionManagerInterface;
 use Packback\Lti1p3\Interfaces\ICookie;
 use Packback\Lti1p3\Interfaces\ILtiRegistration;
 use Packback\Lti1p3\LtiRegistration;
@@ -62,6 +65,13 @@ return function (ContainerBuilder $containerBuilder) {
         * registration) to an endpoint handled by
         * GrotonSchool\Slim\LTI\Action\RegistrationCompleteAction
         */
-        RegistrationConfigureActionInterface::class => DI\autowire(RegistrationConfigurePassthruAction::class)
+        RegistrationConfigureActionInterface::class => DI\autowire(RegistrationConfigurePassthruAction::class),
+
+        SessionManagerInterface::class => DI\get(SessionInterface::class),
+        SessionInterface::class => function (ContainerInterface $container) {
+            $options = $container->get(SettingsInterface::class)->get(SessionInterface::class);
+            return new PhpSession($options);
+        },
+
     ]);
 };

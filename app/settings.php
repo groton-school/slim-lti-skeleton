@@ -6,6 +6,7 @@ use App\Application\Settings\Settings;
 use App\Application\Settings\SettingsInterface;
 use DI\ContainerBuilder;
 use Monolog\Logger;
+use Odan\Session\SessionInterface;
 
 return function (ContainerBuilder $containerBuilder) {
 
@@ -68,6 +69,13 @@ return function (ContainerBuilder $containerBuilder) {
                         'https://canvas.instructure.com/lti/privacy_level' => 'public'
 
                     ]
+                ],
+                SessionInterface::class => [
+                    'name' => "php-session",
+                    'lifetime' => 60 * 60 * 24,
+                    'cookie_samesite' => 'None',
+                    'secure' => true,
+                    'httponly' => true
                 ]
             ]);
         }
