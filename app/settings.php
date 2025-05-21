@@ -47,12 +47,15 @@ return function (ContainerBuilder $containerBuilder) {
                                 "type" => "LtiResourceLinkRequest",
                                 "label" => $TOOL_NAME,
                                 "custom_parameters" => [
-                                    "foo" => "bar",
-                                    "context_id" => '$Context.id'
+                                    'user_id' => '$Canvas.user.id',
+                                    'brand_config_json_url' => '$com.instructure.brandConfigJSON.url',
+                                    'brand_config_js_url' => '$com.instructure.brandConfigJS.url',
+                                    'common_css_url' => '$Canvas.css.common',
+                                    'prefers_high_contrast' => '$Canvas.user.prefersHighContrast',
+                                    'placement' => 'course_navigation'
                                 ],
                                 "placements" => ["course_navigation"],
-                                "roles" => [],
-                                "target_link_uri" => "{$TOOL_URL}/lti/launch?placement=course_navigation"
+                                "roles" => []
                             ]
                         ],
                         "claims" => [
