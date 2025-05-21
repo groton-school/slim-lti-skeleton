@@ -13,7 +13,6 @@ use GrotonSchool\Slim\LTI\Handlers\LaunchHandlerInterface;
 use Packback\Lti1p3\LtiConstants;
 use Packback\Lti1p3\LtiMessageLaunch;
 use Psr\Http\Message\ResponseInterface;
-use Slim\Views\PhpRenderer;
 
 class LaunchHandler implements LaunchHandlerInterface
 {
